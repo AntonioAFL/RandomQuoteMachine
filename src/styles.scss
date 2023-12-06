@@ -1,5 +1,6 @@
 $principal-color: rgb(58, 58, 155);
 $secondary-color: rgb(113, 113, 247);
+$breakpoint-regular: 620px;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -35,6 +36,17 @@ body {
   -webkit-box-shadow: 12px 8px 5px 1px rgba(0, 0, 0, 0.62);
   -moz-box-shadow: 12px 8px 5px 1px rgba(0, 0, 0, 0.62);
   text-align: center;
+
+  @media screen and (min-width: $breakpoint-regular) {
+    min-width: 500px;
+  }
+
+  @media screen and (max-width: $breakpoint-regular) {
+    min-width: 300px;
+    min-height: 400px;
+    padding-top: 0;
+    margin-top: -50px;
+  }
 
   #text {
     font-size: 21px;
